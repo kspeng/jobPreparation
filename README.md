@@ -1,9 +1,10 @@
 # jobPreparation
 LeetCode/LintCode solutions in Java
+Reference to Jerry's git https://github.com/liangchiwuu/leetcode
 
 ## Algorithms
 
-★ indicates critical problems, IMO.  <br />
+★ indicates critical problems, IMO.  
 ☆ indicates LeetCode subscribers only.  
 L indidates Ladder from LintCode questions.  
 
