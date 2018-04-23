@@ -3,9 +3,9 @@ LeetCode/LintCode solutions in Java
 
 ## Algorithms
 
-★ indicates critical problems, IMO.  
-☆ indicates LeetCode subscribers only.
-L indidates Ladder from LintCode questions.
+★ indicates critical problems, IMO.  <br />
+☆ indicates LeetCode subscribers only.  
+L indidates Ladder from LintCode questions.  
 
 | |#|Source|Difficulty|Problem|Solution|Tag| 
 |-|-|-|----------|-------|--------|---|
