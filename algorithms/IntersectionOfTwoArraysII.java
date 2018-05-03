@@ -21,11 +21,13 @@ public class IntersectionOfTwoArraysII {
      * 
      * 1. What if the given array is already sorted? How would you optimize your algorithm?
      * 	  The two pointers solution is clearly better since it only takes O(min(m, n)) time and O(1) space.
+     *
+     *    Time Complexity from O(m+n) or O(n log n + m log m) to => O(min(n,m))
      * 
      * 2. What if nums1's size is small compared to nums2's size? Which algorithm is better?
-     *    *Note given array is not sorted
+     *    * Note given array is not sorted
      *    
-     *    If nums1's size is small, the HashMap solution would be better since O(min(m, n)) space would also be small.
+     *    If nums1's size is small (O(1) vs O(min(m, n))), which we can ignore, the HashMap solution would be better because it much faster in time.
      * 
      * 3. What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements
      * 	  into the memory at once?

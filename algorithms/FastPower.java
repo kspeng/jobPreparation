@@ -14,6 +14,8 @@ public class Solution {
 
 			1.Time Compleixty: O(log(n))
 			(A * B) mod C = (A mod C * B mod C) mod C
+
+        a^(1010)2 = a^(1000)2 ∗ a^(10)2
 		
     */
     public int Solution1_fastPower(int a, int b, int n) {
@@ -40,4 +42,34 @@ public class Solution {
         }
         return (int) (ans%b);
     }
+
+    /*
+        Recursion Solution
+
+    */
+
+     public int Solution1_fastPower(int a, int b, int n) {
+
+        if(n == 1){
+
+        }
+
+        if(n == 0){
+
+        }
+
+        
+     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
