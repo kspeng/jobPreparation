@@ -54,7 +54,7 @@ Collections.sort(arrli);
 ### Map size()  
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();  
 mp.size()  
-mp.put(nums[i], true); 
+mp.put(nums[i], true);   
 mp.remove(key);  
 for (Map.Entry<Integer, Boolean> entry : mp.entrySet())  
 
