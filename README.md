@@ -34,29 +34,29 @@ L indidates Ladder from LintCode questions.
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
 ## Handy Java Syntax
 
-###Array length
+### Array length
 int[] nums = {10,20}
 int [] hashData = new int [256];
 Arrays.sort(nums);
 for (int left = 0; left < nums.length; left++)
 
-###String length()
+### String length()
 s.length()
 for (char c : s.toCharArray())
 
-###List size()
+### List size()
 ArrayList<Integer> arrli = new ArrayList<Integer>();
 arrli.add(i);
 for (int i=0; i<arrli.size(); i++)
 Collections.sort(arrli);
 
-###Map size()
+### Map size()
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();
 mp.size()
 mp.put(nums[i], true);
 for (Map.Entry<Integer, Boolean> entry : mp.entrySet())
 
-###Set size()
+### Set size()
 Set <Integer> sets = new HashSet<Integer>();
 set.size();
 sets.add(nums[left]); 
