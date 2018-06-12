@@ -91,6 +91,11 @@ for(int num: A){
         }
     }
 ```
+
+O(log n) time for the enqueing and dequeing methods (offer, poll, remove() and add)  
+O(n) for the remove(Object) and contains(Object) methods  
+O(1) for the retrieval methods (peek, element, and size)  
+
 ## Time Complexity
 
 常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)

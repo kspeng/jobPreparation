@@ -5,6 +5,18 @@ public class Solution {
      * @param k: An integer
      * @return: an integer array
      */
+
+    /**
+     * A solution with heap. The idea is to define a heap that satisfy the requirements, then add each element to it.
+     * Since only k closest elements are required, we can safely remove (poll) the farthest element when the heap size
+     * is greater than k. 
+     *
+     * It takes O(log k) time to add each element to the heap, and the sorting takes O(k log k) time,
+     * so the time complexity becomes O(n log k) + O(k log k) = O((n+k) log k).
+     * 
+     * Time complexity: O((n+k) log k)
+     */
+
     public int[] kClosestNumbers(int[] A, int target, int k) {
        int [] arrayResults = new int[k];
         if(A == null || A.length < k || k == 0){
