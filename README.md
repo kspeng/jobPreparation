@@ -68,7 +68,8 @@ set.remove(object);
 sets.add(nums[left]);   
 for (Integer data : sets)  
 
-### Heap and comparable 
+### Heap and comparable
+```java 
 // Max heap
 PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k,new Comparator<Integer>(){
         @Override
@@ -89,6 +90,7 @@ for(int num: A){
             maxHeap.poll(); // pull largest, left cloest  
         }
     }
+```
 ## Time Complexity
 
 常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)
