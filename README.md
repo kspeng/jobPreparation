@@ -93,7 +93,7 @@ for(int num: A){
 ```
 n = num of elements, k = num of elements in the PQ  
 
-O(log k) time for the enqueing and dequeing methods (offer, poll, remove() and add) => O(n * log k)
+O(log k) time for the enqueing and dequeing methods (offer, poll, remove() and add) => O(n * log k)  
 O(k) for the remove(Object) and contains(Object) methods  
 O(1) for the retrieval methods (peek, element, and size)  
 
