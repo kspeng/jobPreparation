@@ -14,6 +14,7 @@ L indidates Ladder from LintCode questions.
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
+||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
@@ -29,6 +30,7 @@ L indidates Ladder from LintCode questions.
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
+||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||604|LintCode|Easy|[Window Sum](https://www.lintcode.com/problem/window-sum/description)|[Java](./algorithms/WindowSum.java)|Two Pointers|
 |★L|612|LintCode|Medium|[K Closest Points](https://www.lintcode.com/en/old/problem/k-closest-points/)|[Java](./algorithms/KClosestPoints.java)|Priority Queue|
@@ -66,6 +68,27 @@ set.remove(object);
 sets.add(nums[left]);   
 for (Integer data : sets)  
 
+### Heap and comparable 
+// Max heap
+PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k,new Comparator<Integer>(){
+        @Override
+        public int compare(Integer a, Integer b){
+            // if dist > 0, swap a and b
+            int dist = Math.abs(b-target) - Math.abs(a-target);
+            // if b > a, return postive, then swap b and a
+            if(dist == 0){
+                return b - a;
+            }
+            return dist;
+        }
+    });
+
+for(int num: A){
+        maxHeap.offer(num);
+        if(maxHeap.size() > k){
+            maxHeap.poll(); // pull largest, left cloest  
+        }
+    }
 ## Time Complexity
 
 常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)
