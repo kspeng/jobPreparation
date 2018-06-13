@@ -20,6 +20,7 @@ L indidates Ladder from LintCode questions.
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
 ||170/607|LeetCode/LintCode|Easy|[Two Sum III](https://www.lintcode.com/en/problem/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Two Pointers|
+||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
 |L|228|LeetCode|Naive|[Middle of Linked List](https://www.lintcode.com/problem/middle-of-linked-list/description)|[Java](./algorithms/MiddleOfLinkedList.java)|Two Pointers|
 |L|409/627|LeetCode/LintCode|Easy|[Longest Palindrome](https://www.lintcode.com/en/problem/longest-palindrome/)|[Java](./algorithms/LongestPalindrome.java)|Hash|
@@ -91,11 +92,13 @@ for(int num: A){
         }
     }
 ```
-n = num of elements, k = num of elements in the PQ  
+Height = log(k)
+n = num of elements  
+k = num of elements in the PQ   
 
-O(log k) time for the enqueing and dequeing methods (offer, poll, remove() and add) => O(n * log k)  
-O(k) for the remove(Object) and contains(Object) methods  
-O(1) for the retrieval methods (peek, element, and size)  
+O(log k) time for the enqueing and dequeing methods (offer, poll, remove() and add) => O(n * log k)  => need relocatio and shift
+O(k) for the remove(Object) and contains(Object) methods need loop all elements    
+O(1) for the retrieval methods (peek,pop, element, and size)  
 
 ## Time Complexity
 
