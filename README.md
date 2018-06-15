@@ -70,6 +70,25 @@ set.remove(object);
 sets.add(nums[left]);   
 for (Integer data : sets)  
 
+### Queue size()  
+常用queue operations  
+Queue<TreeNode> queue = new LinkedList<>();  
+queue.offer(root);  
+!queue.isEmpty()  
+int size = queue.size();  
+TreeNode data = queue.poll();  
+### Graph
+```
+// 怎么表示 graph
+Map<Integer, Set<Integer>> graph = new HashMap<>();
+// 怎么判断链接
+graph.get(u).contains(x)
+// loop 边
+for(Integer neighbor: graph.get(u).keys()){
+
+}
+
+```
 ### Heap and comparable
 ```java 
 // Max heap
@@ -100,6 +119,43 @@ k = num of elements in the PQ
 O(log k) time for the enqueing and dequeing methods (offer, poll, remove() and add) => O(n * log k)  => need relocatio and shift
 O(k) for the remove(Object) and contains(Object) methods need loop all elements    
 O(1) for the retrieval methods (peek,pop, element, and size)  
+
+### BFS
+```java
+ public List<List<Integer>> levelOrder(TreeNode root) {
+       List<List<Integer>> results = new ArrayList<>();
+       if(root == null){
+           return results;
+       }
+       Queue<TreeNode> queue = new LinkedList<>();
+       //1. 所有起点放入quque
+       queue.offer(root);
+       while(!queue.isEmpty()){
+           //2. 根据当前拓展下一层
+           List<Integer> curtLevel = new ArrayList<>();
+           // take a snapshot
+           int size = queue.size();
+           for (int i = 0; i < size; i++){
+                TreeNode data = queue.poll();
+                curtLevel.add(data.val);
+                
+               if(data.left != null){
+                   queue.offer(data.left);
+               }
+               if(data.right != null){
+                   queue.offer(data.right);
+               }
+           }
+           
+           results.add(curtLevel);
+       }
+       
+       return results;
+}
+```
+### DFS
+
+### DP
 
 ## Time Complexity
 
