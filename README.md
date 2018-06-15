@@ -122,6 +122,8 @@ O(1) for the retrieval methods (peek,pop, element, and size)
 
 ### BFS
 ```java
+// bfs 时间 O(e) where e = 边数 or O(m+n) = 边+点
+
  public List<List<Integer>> levelOrder(TreeNode root) {
        List<List<Integer>> results = new ArrayList<>();
        if(root == null){
