@@ -11,6 +11,7 @@ L indidates Ladder from LintCode questions.
 | |#|Source|Difficulty|Problem|Solution|Tag| 
 |-|-|-|----------|-------|--------|---|
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
+|★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
@@ -77,6 +78,9 @@ queue.offer(root);
 !queue.isEmpty()  
 int size = queue.size();  
 TreeNode data = queue.poll();  
+###  StringBuilder
+StringBuilder results = new StringBuilder();
+
 ### Graph
 ```
 // 怎么表示 graph
