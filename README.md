@@ -16,6 +16,8 @@ L indidates Ladder from LintCode questions.
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
+||69|LintCode|Easy|[ Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
+||70|LintCode|Easy|[ Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |L|130|LintCode|Medium|[Heapify](https://www.lintcode.com/problem/heapify/description)|[Java](./algorithms/Heapify.java)|Heap|
@@ -58,6 +60,8 @@ arrli.remove(index);
 for (int i=0; i<arrli.size(); i++)  
 Collections.sort(arrli);   
 Collections.sort(arraylist, Collections.reverseOrder());  
+Collections.reverse(arrli);  
+
 ### Map size()  
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();  
 mp.size()  
