@@ -27,6 +27,7 @@ L indidates Ladder from LintCode questions.
 ||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
 |L|228|LeetCode|Naive|[Middle of Linked List](https://www.lintcode.com/problem/middle-of-linked-list/description)|[Java](./algorithms/MiddleOfLinkedList.java)|Two Pointers|
+|L|242|LeetCode|Easy|[Convert Binary Tree to Linked Lists by Depth](https://www.lintcode.com/problem/convert-binary-tree-to-linked-lists-by-depth/description)|[Java](./algorithms/ConvertBinaryTreetoLinkedListsbyDepth.java)|BFS|
 |L|409/627|LeetCode/LintCode|Easy|[Longest Palindrome](https://www.lintcode.com/en/problem/longest-palindrome/)|[Java](./algorithms/LongestPalindrome.java)|Hash|
 ||344|LeetCode|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/description/)|[Java](./algorithms/ReverseString.java)|Two Pointers, String|
 |★|349|LeetCode|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Two Pointers, Set|
