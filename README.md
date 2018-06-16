@@ -44,6 +44,7 @@ L indidates Ladder from LintCode questions.
 int[] nums = {10,20}  
 int [] hashData = new int [256];  
 Arrays.sort(nums);  
+Arrays.sort(nums, Collections.reverseOrder());  
 for (int left = 0; left < nums.length; left++)  
 
 ### String length()  
@@ -55,8 +56,8 @@ ArrayList<Integer> arrli = new ArrayList<Integer>();
 arrli.add(i);  
 arrli.remove(index);  
 for (int i=0; i<arrli.size(); i++)  
-Collections.sort(arrli);  
-
+Collections.sort(arrli);   
+Collections.sort(arraylist, Collections.reverseOrder());  
 ### Map size()  
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();  
 mp.size()  
@@ -77,9 +78,14 @@ Queue<TreeNode> queue = new LinkedList<>();
 queue.offer(root);  
 !queue.isEmpty()  
 int size = queue.size();  
-TreeNode data = queue.poll();  
-###  StringBuilder
-StringBuilder results = new StringBuilder();
+TreeNode data = queue.poll(); 
+
+### StringBuilder
+StringBuilder results = new StringBuilder();  
+results.append("a");  
+// delete  
+results.setLength(results.length() - removeCount);  
+results.toString();  
 
 ### Graph
 ```
