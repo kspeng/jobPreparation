@@ -21,6 +21,7 @@ L indidates Ladder from LintCode questions.
 ||71|LintCode|Easy|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
+|L|125/415|LeetCode/LintCode|Medium|[Topological Sorting](https://www.jiuzhang.com/solution/topological-sorting/)|[Java](./algorithms/TopologicalSorting.java)|BFS|
 |L|130|LintCode|Medium|[Heapify](https://www.lintcode.com/problem/heapify/description)|[Java](./algorithms/Heapify.java)|Heap|
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|

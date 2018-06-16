@@ -34,24 +34,24 @@ public class Solution {
         queue.offer(node);
         set.add(node);
 
-          while(queue.isEmpty() == false){
-            int size = queue.size();
-            for(int i = 0 ;i < size; i++){
-                UndirectedGraphNode cur = queue.poll();
-                if(values.get(cur) == target){
-                    return cur;
-                }
-            
-                for (UndirectedGraphNode nb: cur.neighbors){
-                        
-                    if(set.contains(nb) == false){
-                        queue.offer(nb);
-                        set.add(nb);
-                    }
-                }
-                
-            }  
-          }
+        while(queue.isEmpty() == false){
+          int size = queue.size();
+          for(int i = 0 ;i < size; i++){
+              UndirectedGraphNode cur = queue.poll();
+              if(values.get(cur) == target){
+                  return cur;
+              }
+          
+              for (UndirectedGraphNode nb: cur.neighbors){
+                      
+                  if(set.contains(nb) == false){
+                      queue.offer(nb);
+                      set.add(nb);
+                  }
+              }
+              
+          }  
+        }
                     
         
         return null;
