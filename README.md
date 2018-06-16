@@ -25,6 +25,7 @@ L indidates Ladder from LintCode questions.
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 ||170/607|LeetCode/LintCode|Easy|[Two Sum III](https://www.lintcode.com/en/problem/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Two Pointers|
+||178|LintCode|Medium|[Graph Valid Tree](https://www.lintcode.com/problem/graph-valid-tree/description)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union Find|
 ||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
 |L|228|LeetCode|Naive|[Middle of Linked List](https://www.lintcode.com/problem/middle-of-linked-list/description)|[Java](./algorithms/MiddleOfLinkedList.java)|Two Pointers|
@@ -100,7 +101,7 @@ Map<Integer, Set<Integer>> graph = new HashMap<>();
 // 怎么判断链接
 graph.get(u).contains(x)
 // loop 边
-for(Integer neighbor: graph.get(u).keys()){
+for(Integer neighbor: graph.get(u)){
 
 }
 
