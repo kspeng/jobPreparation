@@ -44,6 +44,8 @@ L indidates Ladder from LintCode questions.
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||604|LintCode|Easy|[Window Sum](https://www.lintcode.com/problem/window-sum/description)|[Java](./algorithms/WindowSum.java)|Two Pointers|
 |★L|612|LintCode|Medium|[K Closest Points](https://www.lintcode.com/en/old/problem/k-closest-points/)|[Java](./algorithms/KClosestPoints.java)|Priority Queue|
+|★L|615|LintCode|Medium|[Course Schedule](https://www.lintcode.com/problem/course-schedule/description)|[Java](./algorithms/CourseSchedule.java)|BFS|
+|★L|616|LintCode|Medium|[Course Schedule II](https://www.lintcode.com/problem/course-schedule-ii/description)|[Java](./algorithms/CourseScheduleII.java)|BFS|
 ||618|LintCode|Medium|[Search Graph Nodes](https://www.lintcode.com/problem/search-graph-nodes/description)|[Java](./algorithms/SearchGraphNodes.java)|BFS|
 ||624|LintCode|Medium|[Remove Substrings](https://www.lintcode.com/problem/remove-substrings/description)|[Java](./algorithms/RemoveSubstrings.java)|BFS, String|
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
