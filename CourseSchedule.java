@@ -4,51 +4,82 @@ public class Solution {
      * @param prerequisites: a list of prerequisite pairs
      * @return: true if can finish all courses or false
      */
+     
      /*
-        Note: they may have course that has no connectivity at all
+     Time( O(V+E) )
      
      */
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        //1. find indegree, an array of list
-        List[] edges =  new ArrayList[numCourses];// look b to unlock a
-        int[] indegree = new int[numCourses]; // how many dependency for a 
-         for(int i = 0; i < numCourses; i++){
-            edges[i] = new ArrayList<Integer>();
-         }
-        for(int i = 0; i < prerequisites.length; i++){
-            indegree[ prerequisites[i][0] ]++; // to course has dependency
-            edges[  prerequisites[i][1]  ].add(prerequisites[i][0] ); //b to unlock a
-        }
+        //1. build graph 
+        Map<Integer, Set<Integer>> graph = buildGraph(numCourses, prerequisites);
+        //2. find out indegree
+        Map<Integer, Integer> indegree = getIndegree(graph);
+        //3. find roots to start
+        Queue<Integer> startRoots = getRoots(indegree, graph);
+        //4. bfs
+        List<Integer> results = runBFS(startRoots, indegree, graph);
         
-        //2. find root 
-        Queue<Integer> queue = new LinkedList();
-        for(int i = 0; i < indegree.length; i++){
-            if(indegree[i] == 0){
-                queue.offer(i);
-            }
+        if(numCourses == results.size()){
+               return true;  
         }
-        int count = 0;
-        while(queue.isEmpty() == false){
-            int course = queue.poll();
-            count++;
-            int n = edges[course].size(); // n course can be unlocked
-            for(int i = 0 ; i < n ;i++){
-                int toBeUnlock = (int)edges[course].get(i);
-                indegree[toBeUnlock] --;
-                if(indegree[toBeUnlock]  == 0){
-                    queue.add(toBeUnlock);
+        return false;
+    }
+    List<Integer> runBFS( Queue<Integer> startRoots, Map<Integer, Integer> indegree,  Map<Integer, Set<Integer>> graph) {
+        // add no dependency nodes 
+        List<Integer> results = new ArrayList(startRoots);
+        while(startRoots.isEmpty() == false){
+            int fromNode = startRoots.poll();
+            
+            for(int nb: graph.get(fromNode)) {
+                int newCount = indegree.get(nb) - 1; // unlock toNode
+                indegree.put(nb, newCount);
+                if(newCount == 0){
+                   results.add(nb); 
+                   startRoots.offer(nb);
                 }
             }
-            
         }
         
-        return numCourses == count;
+        return results;
+        
         
     }
+    Queue<Integer> getRoots( Map<Integer, Integer>indegree,  Map<Integer, Set<Integer>> graph){
+        Queue<Integer> startRoots = new LinkedList<>();
+        for(int node: graph.keySet()){
+            if(indegree.get(node) == 0){
+                startRoots.offer(node);
+            }
+        }
+        
+        return startRoots;
+        
+    }
+    Map<Integer, Integer> getIndegree (Map<Integer, Set<Integer>> graph){
+           Map<Integer, Integer> indegree = new HashMap<>();
+           for(int fromNode : graph.keySet()){
+               indegree.put(fromNode, 0);
+           }
+           for(int fromNode : graph.keySet()){
+                for(int toNode :graph.get(fromNode)){
+                    indegree.put(toNode, indegree.get(toNode)+1 );
+                }
+          }
+          
+          return indegree;
+        
+    }
+   Map<Integer, Set<Integer>>  buildGraph(int numCourses, int[][] prerequisites){
+        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        for(int i = 0 ; i < numCourses; i++){
+            graph.put(i, new HashSet<>());
+        }
+        
+        for(int[] p : prerequisites){
+            graph.get(p[1]).add(p[0]); // from 1 to 0
+        }
+        return graph;
+   }
+   
+    
 }
-
-
-
-
-
-

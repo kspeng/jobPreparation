@@ -4,45 +4,89 @@ public class Solution {
      * @param prerequisites: a list of prerequisite pairs
      * @return: the course order
      */
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-           // Write your code here
-        List[] edges = new ArrayList[numCourses];
-        int[] degree = new int[numCourses];
-        
-        for (int i = 0;i < numCourses; i++)
-            edges[i] = new ArrayList<Integer>();
-            
-        for (int i = 0; i < prerequisites.length; i++) {
-            degree[prerequisites[i][0]] ++ ;
-            edges[prerequisites[i][1]].add(prerequisites[i][0]);
-        }
 
-        Queue queue = new LinkedList();
-        for(int i = 0; i < degree.length; i++){
-            if (degree[i] == 0) {
-                queue.add(i);
-            }
-        }
+    /*
+     Time( O(V+E) )
+     
+    */
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        //1. build graph 
+        Map<Integer, Set<Integer>> graph = buildGraph(numCourses, prerequisites);
+        //2. find out indegree
+        Map<Integer, Integer> indegree = getIndegree(graph);
+        //3. find roots to start
+        Queue<Integer> startRoots = getRoots(indegree, graph);
+        //4. bfs
+        List<Integer> results = runBFS(startRoots, indegree, graph);
         
-        int count = 0;
-        int[] order = new int[numCourses];
-        while(!queue.isEmpty()){
-            int course = (int)queue.poll();
-            order[count] = course;
-            count ++;
-            int n = edges[course].size();
-            for(int i = n - 1; i >= 0 ; i--){
-                int pointer = (int)edges[course].get(i);
-                degree[pointer]--;
-                if (degree[pointer] == 0) {
-                    queue.add(pointer);
+        if(numCourses == results.size()){
+            
+            int[] array = new int[results.size()];
+            
+            for (int i = 0 ; i < results.size(); i++){
+                array[i] = results.get(i);
+            }
+  
+            return array;  
+        }
+        return new int[0];
+    }
+    List<Integer> runBFS( Queue<Integer> startRoots, Map<Integer, Integer> indegree,  Map<Integer, Set<Integer>> graph) {
+        // add no dependency nodes 
+        List<Integer> results = new ArrayList(startRoots);
+        while(startRoots.isEmpty() == false){
+            int fromNode = startRoots.poll();
+            
+            for(int nb: graph.get(fromNode)) {
+                int newCount = indegree.get(nb) - 1; // unlock toNode
+                indegree.put(nb, newCount);
+                if(newCount == 0){
+                   results.add(nb); 
+                   startRoots.offer(nb);
                 }
             }
         }
         
-        if (count == numCourses)
-            return order;
-
-        return new int[0];
+        return results;
+        
+        
     }
+    Queue<Integer> getRoots( Map<Integer, Integer>indegree,  Map<Integer, Set<Integer>> graph){
+        Queue<Integer> startRoots = new LinkedList<>();
+        for(int node: graph.keySet()){
+            if(indegree.get(node) == 0){
+                startRoots.offer(node);
+            }
+        }
+        
+        return startRoots;
+        
+    }
+    Map<Integer, Integer> getIndegree (Map<Integer, Set<Integer>> graph){
+           Map<Integer, Integer> indegree = new HashMap<>();
+           for(int fromNode : graph.keySet()){
+               indegree.put(fromNode, 0);
+           }
+           for(int fromNode : graph.keySet()){
+                for(int toNode :graph.get(fromNode)){
+                    indegree.put(toNode, indegree.get(toNode)+1 );
+                }
+          }
+          
+          return indegree;
+        
+    }
+   Map<Integer, Set<Integer>>  buildGraph(int numCourses, int[][] prerequisites){
+        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        for(int i = 0 ; i < numCourses; i++){
+            graph.put(i, new HashSet<>());
+        }
+        
+        for(int[] p : prerequisites){
+            graph.get(p[1]).add(p[0]); // from 1 to 0
+        }
+        return graph;
+   }
+   
+    
 }

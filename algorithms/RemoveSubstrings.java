@@ -13,6 +13,10 @@ public class Solution {
      input: abcdefg ["a", "b", "c", "d", "e", "f", "g"]
      情况数就是2^n ,n是字符串长度，因为所有的情况里每个字符都有“出现”和“不出现”两种情况
 
+     只想這樣想, 實際上會被加到queue的就是所有不重複的string
+     abcdefg ["a", "b", "c", "d", "e", "f", "g"] 總共可能會有 2^n 種組合
+
+
      */
     public int minLength(String s, Set<String> dict) {
         if(s == null || s.length() == 0 || dict.size() == 0){
