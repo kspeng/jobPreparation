@@ -15,6 +15,10 @@ public class Solution {
      * @param destination: a point
      * @return: the shortest path 
      */
+    /*
+        Time O(V+E)
+
+    */
     int[] dx = {1,1,-1,-1,2,2,-2,-2};
     int[] dy = {2,-2,2,-2,1,-1,1,-1};
     public int shortestPath(boolean[][] grid, Point source, Point destination) {
