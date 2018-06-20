@@ -42,8 +42,10 @@ L indidates Ladder from LintCode questions.
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
 ||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
+||598|LintCode|Medium|[Zombie in Matrix](https://www.lintcode.com/problem/zombie-in-matrix/description)|[Java](./algorithms/ZombieInMatrix.java)|BFS|
 ||604|LintCode|Easy|[Window Sum](https://www.lintcode.com/problem/window-sum/description)|[Java](./algorithms/WindowSum.java)|Two Pointers|
 |★L|605|LintCode|Medium|[Sequence Reconstruction](https://www.lintcode.com/problem/sequence-reconstruction/description)|[Java](./algorithms/SequenceReconstruction.java)|BFS, Topological Sort|
+|L|611|LintCode|Medium|[Knight Shortest Path](https://www.lintcode.com/problem/knight-shortest-path/description)|[Java](./algorithms/KnightShortestPath.java)|BFS|
 |★L|612|LintCode|Medium|[K Closest Points](https://www.lintcode.com/en/old/problem/k-closest-points/)|[Java](./algorithms/KClosestPoints.java)|Priority Queue|
 |★L|615|LintCode|Medium|[Course Schedule](https://www.lintcode.com/problem/course-schedule/description)|[Java](./algorithms/CourseSchedule.java)|BFS|
 |★L|616|LintCode|Medium|[Course Schedule II](https://www.lintcode.com/problem/course-schedule-ii/description)|[Java](./algorithms/CourseScheduleII.java)|BFS|

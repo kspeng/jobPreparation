@@ -26,7 +26,7 @@ public class Solution {
         int j = 0;
         for(int i : org){
             graph.put(i, new HashSet<>());
-            order.put(i, j++);
+            order.put(i,j++);
             indegree.put(i,0);
         }
         int size = 0;
