@@ -13,6 +13,7 @@ L indidates Ladder from LintCode questions.
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
+||17|LintCode|Medium|[Subsets](https://www.lintcode.com/problem/subsets/description)|[Java](./algorithms/Subsets.java)|DFS|
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
@@ -21,6 +22,7 @@ L indidates Ladder from LintCode questions.
 ||71|LintCode|Easy|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
+|★|120|LintCode|Medium|[Word Ladder](https://www.lintcode.com/problem/word-ladder/description)|[Java](./algorithms/WordLadder.java)|BFS, DFS|
 |★|127|LintCode|Medium|[Topological Sorting](https://www.jiuzhang.com/solution/topological-sorting/)|[Java](./algorithms/TopologicalSorting.java)|BFS, DFS|
 |L|130|LintCode|Medium|[Heapify](https://www.lintcode.com/problem/heapify/description)|[Java](./algorithms/Heapify.java)|Heap|
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
@@ -41,6 +43,7 @@ L indidates Ladder from LintCode questions.
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
 ||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
+||477|LintCode|Medium|[Combination Sum](https://www.lintcode.com/problem/combination-sum/description)|[Java](./algorithms/findkClosestElements.java)|DFS|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||598|LintCode|Medium|[Zombie in Matrix](https://www.lintcode.com/problem/zombie-in-matrix/description)|[Java](./algorithms/ZombieInMatrix.java)|BFS|
 ||604|LintCode|Easy|[Window Sum](https://www.lintcode.com/problem/window-sum/description)|[Java](./algorithms/WindowSum.java)|Two Pointers|
@@ -236,7 +239,23 @@ while (!queue.isEmpty()) {
 ### DFS
 
 ### DP
+###
+```
+搜索的时间复杂度：O(答案总数 * 构造每个答案的时间)
+举例：Subsets问题，求所有的子集。子集个数一共 2^n，每个集合的平均长度是 O(n) 的，所以时间复杂度为 O(n * 2^n)，同理 Permutations 问题的时间复杂度为：O(n * n!)
 
+动态规划的时间复杂度：O(状态总数 * 计算每个状态的时间复杂度)
+举例：triangle，数字三角形的最短路径，状态总数约 O(n^2) 个，计算每个状态的时间复杂度为 O(1)——就是求一下 min。所以总的时间复杂度为 O(n^2)
+
+用分治法解决二叉树问题的时间复杂度：O(二叉树节点个数 * 每个节点的计算时间)
+举例：二叉树最大深度。二叉树节点个数为 N，每个节点上的计算时间为 O(1)。总的时间复杂度为 O(N)
+
+*(额外)空间复杂度不用包括输入和输出的部分
+
+
+
+
+```
 ## Time Complexity
 
 常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)
