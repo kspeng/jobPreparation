@@ -13,10 +13,13 @@ L indidates Ladder from LintCode questions.
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
+||15|LintCode|Medium|[Permutations](https://www.lintcode.com/problem/permutations/description)|[Java](./algorithms/Permutations.java)|DFS|
+||16|LintCode|Medium|[Permutations2](https://www.lintcode.com/problem/permutations-ii/description)|[Java](./algorithms/Permutations2.java)|DFS|
 ||17|LintCode|Medium|[Subsets](https://www.lintcode.com/problem/subsets/description)|[Java](./algorithms/Subsets.java)|DFS|
 ||18|LintCode|Medium|[Subsets2](https://www.lintcode.com/problem/subsets/description)|[Java](./algorithms/Subsets2.java)|DFS|
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
+|L|33|LintCode|Easy|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
 ||69|LintCode|Easy|[ Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
 ||70|LintCode|Easy|[ Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
@@ -26,6 +29,7 @@ L indidates Ladder from LintCode questions.
 |★|120|LintCode|Medium|[Word Ladder](https://www.lintcode.com/problem/word-ladder/description)|[Java](./algorithms/WordLadder.java)|BFS, DFS|
 |★|127|LintCode|Medium|[Topological Sorting](https://www.jiuzhang.com/solution/topological-sorting/)|[Java](./algorithms/TopologicalSorting.java)|BFS, DFS|
 |L|130|LintCode|Medium|[Heapify](https://www.lintcode.com/problem/heapify/description)|[Java](./algorithms/Heapify.java)|Heap|
+||136|LintCode|Medium|[Palindrome Partitioning](https://www.lintcode.com/problem/palindrome-partitioning/description)|[Java](./algorithms/PalindromePartitioning.java)|BFS, DFS|
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
@@ -238,8 +242,114 @@ while (!queue.isEmpty()) {
 }
 ```
 ### DFS
+```
+/*
+搜索的时间复杂度：O(答案总数 * 构造每个答案的时间)
 
+*排列*搜索问题 Permutation, N queue [1,2,3][1,3,2] ..
+     时间复杂度:与 n! 相关。
+     O(答案总数 * 构造每个答案的时间) = O(n! * n)
+
+Permutations Example:
+nums = [1,2,3] = 3 * 2 * 1 = 6 solutions
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+*组合*搜索问题 Combinations, Subset, Palindrome Partitioning (组合中的元素是顺序**无关**的)
+     时间复杂度:与 2^n 相关。
+     O(答案总数 * 构造每个答案的时间) = O(2^n * n)
+
+Palindrome Partitioning （n-1）个字母组合的切割问题 example:
+    Special case
+    aaaaaaaaaaaaa
+    => search 2^n
+
+    Given s = "aab", return:
+    [
+      ["aa","b"],
+      ["a","a","b"]
+    ]
+
+Combinations example:
+    Given candidate set [10,1,6,7,2,1,5] and target 8,
+    [
+      [1,7],
+      [1,2,5],
+      [2,6],
+      [1,1,6]
+    ]
+
+Subsets example:
+    [1,2,3]  = 2 ^ 3 = 8 solutions
+    [
+      [3],
+      [1],
+      [2],
+      [1,2,3],
+      [1,3],
+      [2,3],
+      [1,2],
+      []
+    ]
+
+Combinations:
+
+
+dfs 递归方法
+1. 递归的定义 
+2. 递归的拆解
+3. 递归的出口
+
+
+*/
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+      List<List<Integer>> results = new ArrayList<>();
+      if(nums == null){
+          return results;
+      }
+      if(nums.length == 0){
+          results.add(new ArrayList<Integer>());
+          return results;
+      }
+      // sort the list for duplication
+      Arrays.sort(nums);
+      List<Integer> subset = new ArrayList<Integer>();
+      // dfs
+      helper(nums,0,results, subset);
+      
+      return results;
+    }
+    // 递归的定义 
+    void helper(int[] nums, int startIndex, List<List<Integer>> results,List<Integer> subset ){
+         //deep copy
+         //递归的出口
+         results.add(new ArrayList<Integer>(subset));
+         //递归的拆解
+         for(int i = startIndex; i < nums.length; i++){
+               if(i != startIndex && nums[i-1] == nums[i]){
+                  continue;
+                   
+               }
+               subset.add(nums[i]);
+               helper(nums, i + 1,results, subset);
+               subset.remove(subset.size() - 1);
+         }   
+    }
+}
+```
 ### DP
+
+## Time Complexity
+
+
+常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)
+
 ###
 ```
 搜索的时间复杂度：O(答案总数 * 构造每个答案的时间)
@@ -253,13 +363,5 @@ while (!queue.isEmpty()) {
 
 *(额外)空间复杂度不用包括输入和输出的部分
 
-
-
-
 ```
-## Time Complexity
-
-常见的算法时间复杂度由小到大依次为：Ο(1)＜Ο(log2n)＜Ο(n)＜Ο(nlog2n)＜Ο(n2)＜Ο(n3)＜…＜Ο(2n)＜Ο(n!)
-
-
 ![Screenshot](timeComplexity.png)
