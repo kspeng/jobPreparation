@@ -19,7 +19,8 @@ L indidates Ladder from LintCode questions.
 ||18|LintCode|Medium|[Subsets2](https://www.lintcode.com/problem/subsets/description)|[Java](./algorithms/Subsets2.java)|DFS|
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
-|L|33|LintCode|Easy|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
+|L|33|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
+|L|34|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens2.java)|DFS|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
 ||69|LintCode|Easy|[ Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
 ||70|LintCode|Easy|[ Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
