@@ -44,6 +44,7 @@ L indidates Ladder from LintCode questions.
 ||344|LeetCode|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/description/)|[Java](./algorithms/ReverseString.java)|Two Pointers, String|
 |★|349|LeetCode|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Two Pointers, Set|
 |★|350|LeetCode|Easy|[Intersection of Two ArraysII](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)|[Java](./algorithms/IntersectionOfTwoArraysII.java)|Two Pointers, Set|
+|★|413|LintCode|Easy|[Two Sum](https://www.lintcode.com/problem/reverse-integer/description)|[Java](./algorithms/ReverseInteger.java)|Math|
 |L|428|LintCode|Medium|[Pow(x, n)](https://www.lintcode.com/en/problem/powx-n/)|[Java](./algorithms/Powx-n.java)|Binary Search|
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
