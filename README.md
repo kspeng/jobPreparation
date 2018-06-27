@@ -51,6 +51,7 @@ L indidates Ladder from LintCode questions.
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
 ||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
 ||477|LintCode|Medium|[Combination Sum](https://www.lintcode.com/problem/combination-sum/description)|[Java](./algorithms/findkClosestElements.java)|DFS|
+||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||598|LintCode|Medium|[Zombie in Matrix](https://www.lintcode.com/problem/zombie-in-matrix/description)|[Java](./algorithms/ZombieInMatrix.java)|BFS|
 ||604|LintCode|Easy|[Window Sum](https://www.lintcode.com/problem/window-sum/description)|[Java](./algorithms/WindowSum.java)|Two Pointers|
