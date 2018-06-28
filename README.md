@@ -11,6 +11,7 @@ L indidates Ladder from LintCode questions.
 | |#|Source|Difficulty|Problem|Solution|Tag| 
 |-|-|-|----------|-------|--------|---|
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
+||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestSubstringWithoutRepeatingCharacters.java)|Two Pointers, String|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
 ||15|LintCode|Medium|[Permutations](https://www.lintcode.com/problem/permutations/description)|[Java](./algorithms/Permutations.java)|DFS|
@@ -22,8 +23,9 @@ L indidates Ladder from LintCode questions.
 |L|33|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
 |L|34|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens2.java)|DFS|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
-||69|LintCode|Easy|[ Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
-||70|LintCode|Easy|[ Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
+|★|66|LintCode|Easy|[Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal/description)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
+||69|LintCode|Easy|[Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
+||70|LintCode|Easy|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
 ||71|LintCode|Easy|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
