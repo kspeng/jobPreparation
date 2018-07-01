@@ -23,10 +23,13 @@ L indidates Ladder from LintCode questions.
 |L|33|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
 |L|34|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens2.java)|DFS|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
-|★|66|LintCode|Easy|[Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal/description)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
-||69|LintCode|Easy|[Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
-||70|LintCode|Easy|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
-||71|LintCode|Easy|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
+|★|66|LintCode|Medium|[Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal/description)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
+|★|67|LintCode|Medium|[Binary Tree Inorder Traversal](https://www.lintcode.com/problem/binary-tree-inorder-traversal/description)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
+||68|LintCode|Medium|[Binary Tree Postorder TraversalB
+](https://www.lintcode.com/problem/binary-tree-postorder-traversal/description)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
+|★|69|LintCode|Medium|[Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
+||70|LintCode|Medium|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
+||71|LintCode|Medium|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|120|LintCode|Medium|[Word Ladder](https://www.lintcode.com/problem/word-ladder/description)|[Java](./algorithms/WordLadder.java)|BFS, DFS|
@@ -347,6 +350,57 @@ dfs 递归方法
          }   
     }
 }
+```
+
+### Traverse vs Divide Conquer vs DFS
+Common: They are both Recursion Algorithm , they all DFS， all can be done with no recursion
+Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结果) 
+      2. Top down (小人由上往下去记录) vs Bottom up (答案由下往上组合靠手下)
+#### Code difference:
+```
+   /*
+        Traverse遍历法, 小人拿本子去记录， 所以help 没有 return 东西
+        O(n)     
+    */
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> results = new ArrayList<>();
+        if(root == null){
+            return results;
+        }
+       helper(root, results);
+       return results;
+    }
+    // 递归的定义，把root 为根的preorder 加入results 里面
+    private void helper(TreeNode root,List<Integer> results){
+        // 递归的出口
+        if(root == null){
+            return;
+        }
+        // 递归的分解 => 根左右
+        results.add(root.val);
+        helper(root.left,results);
+        helper(root.right,results);
+    }
+
+###############################################################
+     # Divide && Conquer, 让手下去解决，最后再合起来
+     public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> results = new ArrayList<>();
+        if(root == null){
+            return results;
+        }
+        // divide
+        List<Integer> left = preorderTraversal(root.left);
+        List<Integer> right = preorderTraversal(root.right);
+       
+        // 根左右
+        // Conquer
+        results.add(root.val);
+        results.addAll(left);
+        results.addAll(right);
+        
+       return results;
+    }
 ```
 ### DP
 
