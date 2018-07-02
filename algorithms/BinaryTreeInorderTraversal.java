@@ -12,10 +12,6 @@
 
 
 public class Solution1 {
-    /**
-     * @param root: A Tree
-     * @return: Inorder in ArrayList which contains node values.
-     */
 
     // recursive & divide and conquer
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -39,10 +35,35 @@ public class Solution1 {
 
 
 public class Solution2 {
-    /**
-     * @param root: A Tree
-     * @return: Inorder in ArrayList which contains node values.
-     */
+   /*
+        Traverse遍历法
+        O(n)
+        
+    */
+    public List<Integer> inorderTraversal(TreeNode root) {
+       List<Integer> results = new ArrayList();
+        if(root == null){
+            return results;
+        }
+        
+        help(root, results);
+        return results;
+    }
+    private void help(TreeNode root, List<Integer> results){
+        if(root == null){
+            return;
+        }
+        
+        help(root.left, results);
+        results.add(root.val);
+        help(root.right, results);
+        
+    }
+    
+}
+
+public class Solution3 {
+    // use stack with no recursion
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> results = new ArrayList<>();
         if(root == null){
