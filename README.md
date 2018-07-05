@@ -31,6 +31,8 @@ L indidates Ladder from LintCode questions.
 ||70|LintCode|Medium|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
 ||71|LintCode|Medium|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
+||88|LintCode|Medium|[Lowest Common Ancestor of a Binary Tree
+](https://www.lintcode.com/problem/lowest-common-ancestor/description)|[Java](./algorithms/LowestCommonAncestorofaBinaryTree.java)|Binary Search Tree|
 ||93|LintCode|Medium|[Balanced Binary Tree](https://www.lintcode.com/problem/balanced-binary-tree/description)|[Java](./algorithms/BalancedBinaryTree.java)|Divided and conquer|
 ||95|LintCode|Medium|[Validate Binary Search Tree](https://www.lintcode.com/problem/validate-binary-search-tree/description)|[Java](./algorithms/Validate BinarySearchTree.java)|Divided and conquer, traverse, BST|
 ||97|LintCode|Easy|[Maximum Depth of Binary Tree](https://www.lintcode.com/problem/maximum-depth-of-binary-tree/description)|[Java](./algorithms/MaximumDepthofBinaryTree.java)|Tree, Divide and Conquer, Travese|
@@ -43,6 +45,7 @@ L indidates Ladder from LintCode questions.
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 ||170/607|LeetCode/LintCode|Easy|[Two Sum III](https://www.lintcode.com/en/problem/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Two Pointers|
+||175|LintCode|Easy|[Invert Binary Tree](https://www.lintcode.com/problem/invert-binary-tree/description)|[Java](./algorithms/InvertBinaryTree.java)|Binary tree|
 ||178|LintCode|Medium|[Graph Valid Tree](https://www.lintcode.com/problem/graph-valid-tree/description)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union Find|
 ||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
@@ -52,15 +55,20 @@ L indidates Ladder from LintCode questions.
 ||344|LeetCode|Easy|[Reverse String](https://leetcode.com/problems/reverse-string/description/)|[Java](./algorithms/ReverseString.java)|Two Pointers, String|
 |★|349|LeetCode|Easy|[Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)|[Java](./algorithms/IntersectionOfTwoArrays.java)|Two Pointers, Set|
 |★|350|LeetCode|Easy|[Intersection of Two ArraysII](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)|[Java](./algorithms/IntersectionOfTwoArraysII.java)|Two Pointers, Set|
+||378|LintCode|Medium|[Convert Binary Search Tree to Doubly Linked List](https://www.lintcode.com/problem/convert-binary-search-tree-to-doubly-linked-list/description)|[Java](./algorithms/ConvertBinarySearchTreetoDoublyLinkedList.java)|BST, linked list|
 |★|413|LintCode|Easy|[Two Sum](https://www.lintcode.com/problem/reverse-integer/description)|[Java](./algorithms/ReverseInteger.java)|Math|
 |L|428|LintCode|Medium|[Pow(x, n)](https://www.lintcode.com/en/problem/powx-n/)|[Java](./algorithms/Powx-n.java)|Binary Search|
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
 ||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
+||474|LintCode|Medium|[Lowest Common Ancestor II](https://www.lintcode.com/problem/lowest-common-ancestor-ii/description)|[Java](./algorithms/LowestCommonAncestorII.java)|Binary Search Tree|
 ||477|LintCode|Medium|[Combination Sum](https://www.lintcode.com/problem/combination-sum/description)|[Java](./algorithms/findkClosestElements.java)|DFS|
+||453|LintCode|Medium|[Flatten Binary Tree to Linked List
+](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
+||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
 ||596|LintCode|Easy|[Minimum Subtree](https://www.lintcode.com/problem/minimum-subtree/description)|[Java](./algorithms/MinimumSubtree.java)|Divide and Conquer|
 ||597|LintCode|Easy|[Subtree with Maximum Average](https://www.lintcode.com/problem/subtree-with-maximum-average/description)|[Java](./algorithms/SubtreewithMaximumAverage.java)|Divide and Conquer|
 ||598|LintCode|Medium|[Zombie in Matrix](https://www.lintcode.com/problem/zombie-in-matrix/description)|[Java](./algorithms/ZombieInMatrix.java)|BFS|
@@ -74,6 +82,13 @@ L indidates Ladder from LintCode questions.
 ||624|LintCode|Medium|[Remove Substrings](https://www.lintcode.com/problem/remove-substrings/description)|[Java](./algorithms/RemoveSubstrings.java)|BFS, String|
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
 ||900|LintCode|Easy|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value/description)|[Java](./algorithms/ClosestBinarySearchTreeValue.java)|BST, traverse|
+||901|LintCode|Hard|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value-ii/description)|[Java](./algorithms/ClosestBinarySearchTreeValueII.java)|BST, traverse|
+||902|LintCode|Medium|[Kth Smallest Element in a BST](https://www.lintcode.com/problem/kth-smallest-element-in-a-bst/description)|[Java](./algorithms/KthSmallestElementinaBST.java)|BST, traverse|
+
+
+
+
+
 ## Handy Java Syntax
 
 ### Array length  
@@ -90,8 +105,9 @@ for (char c : s.toCharArray())
 ### List size()  
 ArrayList<Integer> arrli = new ArrayList<Integer>();  
 arrli.add(i);  
+arrli.subList(a,b);  
 arrli.remove(index);  
-for (int i=0; i<arrli.size(); i++)  
+for (int i=0; i < arrli.size(); i++)  
 Collections.sort(arrli);   
 Collections.sort(arraylist, Collections.reverseOrder());  
 Collections.reverse(arrli);  
@@ -124,6 +140,20 @@ results.append("a");
 // delete  
 results.setLength(results.length() - removeCount);  
 results.toString();  
+### Binary Search Tree
+从定义出发:
+• 左子树都比根节点小
+• 右子树都不小于根节点
+
+从效果出发:
+• 中序遍历 in-order traversal 是“不下降”序列 (ascending order)
+• 中序遍历为12345
+
+如果一棵二叉树的中序遍历 **不是** ascending order 序列，则一定不是BST
+例如: 12435
+
+如果一棵二叉树的中序遍历是不下降，也未必是BST
+例如: 111111
 
 ### Graph
 ```

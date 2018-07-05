@@ -14,6 +14,8 @@ public class Solution1 {
   /*
     In order traverse (左根右)
     左>根>右
+
+    根据BST: 后面的数值会要大于前一个数
   */
     int lastVal = Integer.MIN_VALUE;
     boolean firstNode = true;
