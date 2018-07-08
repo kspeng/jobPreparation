@@ -30,8 +30,7 @@ L indidates Ladder from LintCode questions.
 ||70|LintCode|Medium|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
 ||71|LintCode|Medium|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
 ||74|LintCode|Medium|[First Bad Version](https://www.lintcode.com/en/problem/first-bad-version/)|[Java](./algorithms/FirstBadVersion.java)|Binary Search|
-||88|LintCode|Medium|[Lowest Common Ancestor of a Binary Tree
-](https://www.lintcode.com/problem/lowest-common-ancestor/description)|[Java](./algorithms/LowestCommonAncestorofaBinaryTree.java)|Binary Search Tree|
+||88|LintCode|Medium|[Lowest Common Ancestor of a Binary Tree](https://www.lintcode.com/problem/lowest-common-ancestor/description)|[Java](./algorithms/LowestCommonAncestorofaBinaryTree.java)|Binary Search Tree|
 ||93|LintCode|Medium|[Balanced Binary Tree](https://www.lintcode.com/problem/balanced-binary-tree/description)|[Java](./algorithms/BalancedBinaryTree.java)|Divided and conquer|
 ||95|LintCode|Medium|[Validate Binary Search Tree](https://www.lintcode.com/problem/validate-binary-search-tree/description)|[Java](./algorithms/Validate BinarySearchTree.java)|Divided and conquer, traverse, BST|
 ||97|LintCode|Easy|[Maximum Depth of Binary Tree](https://www.lintcode.com/problem/maximum-depth-of-binary-tree/description)|[Java](./algorithms/MaximumDepthofBinaryTree.java)|Tree, Divide and Conquer, Travese|
@@ -59,17 +58,15 @@ L indidates Ladder from LintCode questions.
 |★|413|LintCode|Easy|[Two Sum](https://www.lintcode.com/problem/reverse-integer/description)|[Java](./algorithms/ReverseInteger.java)|Math|
 |L|428|LintCode|Medium|[Pow(x, n)](https://www.lintcode.com/en/problem/powx-n/)|[Java](./algorithms/Powx-n.java)|Binary Search|
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
+||453|LintCode|Medium|[Flatten Binary Tree to Linked List](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
 ||460|LintCode|Medium|[Find K Closest Elements](https://www.lintcode.com/problem/find-k-closest-elements/description)|[Java](./algorithms/findkClosestElements.java)|Heap|
 ||474|LintCode|Medium|[Lowest Common Ancestor II](https://www.lintcode.com/problem/lowest-common-ancestor-ii/description)|[Java](./algorithms/LowestCommonAncestorII.java)|Binary Search Tree|
 ||477|LintCode|Medium|[Combination Sum](https://www.lintcode.com/problem/combination-sum/description)|[Java](./algorithms/findkClosestElements.java)|DFS|
-||453|LintCode|Medium|[Flatten Binary Tree to Linked List
-](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
-||570|LintCode|Medium|[Find the Missing Number II
-](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
+||570|LintCode|Medium|[Find the Missing Number II](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
 ||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
 ||596|LintCode|Easy|[Minimum Subtree](https://www.lintcode.com/problem/minimum-subtree/description)|[Java](./algorithms/MinimumSubtree.java)|Divide and Conquer|
 ||597|LintCode|Easy|[Subtree with Maximum Average](https://www.lintcode.com/problem/subtree-with-maximum-average/description)|[Java](./algorithms/SubtreewithMaximumAverage.java)|Divide and Conquer|
