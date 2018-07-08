@@ -25,8 +25,7 @@ L indidates Ladder from LintCode questions.
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
 |★|66|LintCode|Medium|[Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal/description)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
 |★|67|LintCode|Medium|[Binary Tree Inorder Traversal](https://www.lintcode.com/problem/binary-tree-inorder-traversal/description)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
-||68|LintCode|Medium|[Binary Tree Postorder TraversalB
-](https://www.lintcode.com/problem/binary-tree-postorder-traversal/description)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
+||68|LintCode|Medium|[Binary Tree Postorder TraversalB](https://www.lintcode.com/problem/binary-tree-postorder-traversal/description)|[Java](./algorithms/BinaryTreePostorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
 |★|69|LintCode|Medium|[Binary Tree Level Order Traversal](www.lintcode.com/problem/binary-tree-level-order-traversal/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS|
 ||70|LintCode|Medium|[Binary Tree Level Order Traversal II](https://www.lintcode.com/problem/binary-tree-level-order-traversal-ii/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree2.java)|BFS|
 ||71|LintCode|Medium|[Binary Tree Zigzag Level Order Traversal](https://www.lintcode.com/problem/binary-tree-zigzag-level-order-traversal/description)|[Java](./algorithms/BinaryTreeZigzagLevelOrderTraversal.java)|BFS|
@@ -44,6 +43,7 @@ L indidates Ladder from LintCode questions.
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
+||196|LintCode|Medium|[Missing Number](https://www.lintcode.com/problem/missing-number/description)|[Java](./algorithms/MissingNumber.java)|Math|
 ||170/607|LeetCode/LintCode|Easy|[Two Sum III](https://www.lintcode.com/en/problem/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Two Pointers|
 ||175|LintCode|Easy|[Invert Binary Tree](https://www.lintcode.com/problem/invert-binary-tree/description)|[Java](./algorithms/InvertBinaryTree.java)|Binary tree|
 ||178|LintCode|Medium|[Graph Valid Tree](https://www.lintcode.com/problem/graph-valid-tree/description)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union Find|
@@ -68,6 +68,8 @@ L indidates Ladder from LintCode questions.
 ](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
+||570|LintCode|Medium|[Find the Missing Number II
+](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
 ||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
 ||596|LintCode|Easy|[Minimum Subtree](https://www.lintcode.com/problem/minimum-subtree/description)|[Java](./algorithms/MinimumSubtree.java)|Divide and Conquer|
 ||597|LintCode|Easy|[Subtree with Maximum Average](https://www.lintcode.com/problem/subtree-with-maximum-average/description)|[Java](./algorithms/SubtreewithMaximumAverage.java)|Divide and Conquer|
