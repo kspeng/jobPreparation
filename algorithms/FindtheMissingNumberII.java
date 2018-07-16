@@ -1,9 +1,8 @@
 public class Solution {
-    /**
-     * @param n: An integer
-     * @param str: a string with number from 1-n in random order and miss one number
-     * @return: An integer
-     */
+    /*
+    Time Complexity O(2* 2^n)
+
+    */
     public boolean found = false;
     public int ans = 0;
     

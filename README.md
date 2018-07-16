@@ -13,6 +13,8 @@ L indidates Ladder from LintCode questions.
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
 ||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestSubstringWithoutRepeatingCharacters.java)|Two Pointers, String|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
+||10|LeetCode|Medium|[String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)|[Java](./algorithms/StringPermutationII.java)|DFS|
+||10|LeetCode|Medium|[MinStack](https://www.lintcode.com/problem/min-stack/description)|[Java](./algorithms/MinStack.java)|Stack|
 ||14|LintCode|Easy|[First Position of Target ](https://www.lintcode.com/en/problem/first-position-of-target/)|[Java](./algorithms/FirstPositionOfTarget.java)|Binary Search|
 ||15|LintCode|Medium|[Permutations](https://www.lintcode.com/problem/permutations/description)|[Java](./algorithms/Permutations.java)|DFS|
 ||16|LintCode|Medium|[Permutations2](https://www.lintcode.com/problem/permutations-ii/description)|[Java](./algorithms/Permutations2.java)|DFS|
@@ -34,6 +36,7 @@ L indidates Ladder from LintCode questions.
 ||93|LintCode|Medium|[Balanced Binary Tree](https://www.lintcode.com/problem/balanced-binary-tree/description)|[Java](./algorithms/BalancedBinaryTree.java)|Divided and conquer|
 ||95|LintCode|Medium|[Validate Binary Search Tree](https://www.lintcode.com/problem/validate-binary-search-tree/description)|[Java](./algorithms/Validate BinarySearchTree.java)|Divided and conquer, traverse, BST|
 ||97|LintCode|Easy|[Maximum Depth of Binary Tree](https://www.lintcode.com/problem/maximum-depth-of-binary-tree/description)|[Java](./algorithms/MaximumDepthofBinaryTree.java)|Tree, Divide and Conquer, Travese|
+||107|LintCode|Medium|[Word Break](https://www.lintcode.com/problem/word-break/description)|[Java](./algorithms/WordBreak.java)|DP|
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|120|LintCode|Medium|[Word Ladder](https://www.lintcode.com/problem/word-ladder/description)|[Java](./algorithms/WordLadder.java)|BFS, DFS|
 |★|127|LintCode|Medium|[Topological Sorting](https://www.jiuzhang.com/solution/topological-sorting/)|[Java](./algorithms/TopologicalSorting.java)|BFS, DFS|
@@ -41,6 +44,7 @@ L indidates Ladder from LintCode questions.
 ||136|LintCode|Medium|[Palindrome Partitioning](https://www.lintcode.com/problem/palindrome-partitioning/description)|[Java](./algorithms/PalindromePartitioning.java)|BFS, DFS|
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
+|L|152|LintCode|Medium|[Combinations](https://www.lintcode.com/problem/combinations/description)|[Java](./algorithms/Combinations.java)|DFS|
 ||167|LeetCode|Easy|[Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)|[Java](./algorithms/TwoSumII.java)|Two Pointers|
 ||196|LintCode|Medium|[Missing Number](https://www.lintcode.com/problem/missing-number/description)|[Java](./algorithms/MissingNumber.java)|Math|
 ||170/607|LeetCode/LintCode|Easy|[Two Sum III](https://www.lintcode.com/en/problem/two-sum-iii-data-structure-design/)|[Java](./algorithms/TwoSumIII.java)|Two Pointers|
@@ -48,6 +52,7 @@ L indidates Ladder from LintCode questions.
 ||178|LintCode|Medium|[Graph Valid Tree](https://www.lintcode.com/problem/graph-valid-tree/description)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union Find|
 ||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
+||211|LeetCode|Easy|[String Permutation](https://www.lintcode.com/problem/string-permutation/description)|[Java](./algorithms/reverseList.java)| Pointers|
 |L|228|LeetCode|Naive|[Middle of Linked List](https://www.lintcode.com/problem/middle-of-linked-list/description)|[Java](./algorithms/MiddleOfLinkedList.java)|Two Pointers|
 |L|242|LeetCode|Easy|[Convert Binary Tree to Linked Lists by Depth](https://www.lintcode.com/problem/convert-binary-tree-to-linked-lists-by-depth/description)|[Java](./algorithms/ConvertBinaryTreetoLinkedListsbyDepth.java)|BFS|
 |L|409/627|LeetCode/LintCode|Easy|[Longest Palindrome](https://www.lintcode.com/en/problem/longest-palindrome/)|[Java](./algorithms/LongestPalindrome.java)|Hash|
@@ -58,6 +63,7 @@ L indidates Ladder from LintCode questions.
 |★|413|LintCode|Easy|[Two Sum](https://www.lintcode.com/problem/reverse-integer/description)|[Java](./algorithms/ReverseInteger.java)|Math|
 |L|428|LintCode|Medium|[Pow(x, n)](https://www.lintcode.com/en/problem/powx-n/)|[Java](./algorithms/Powx-n.java)|Binary Search|
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
+||452|LintCode|Medium|[Letter Combinations of a Phone Number](https://www.lintcode.com/problem/letter-combinations-of-a-phone-number/description)|[Java](./algorithms/LetterCombinationsPhoneNumber.java)|BST,DFS|
 ||453|LintCode|Medium|[Flatten Binary Tree to Linked List](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
@@ -68,6 +74,7 @@ L indidates Ladder from LintCode questions.
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||570|LintCode|Medium|[Find the Missing Number II](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
 ||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
+||582|LintCode|Medium|[Word Break II](https://www.lintcode.com/problem/word-break-ii/description)|[Java](./algorithms/WordBreakII.java)|DFS, Divide and Conquer|
 ||596|LintCode|Easy|[Minimum Subtree](https://www.lintcode.com/problem/minimum-subtree/description)|[Java](./algorithms/MinimumSubtree.java)|Divide and Conquer|
 ||597|LintCode|Easy|[Subtree with Maximum Average](https://www.lintcode.com/problem/subtree-with-maximum-average/description)|[Java](./algorithms/SubtreewithMaximumAverage.java)|Divide and Conquer|
 ||598|LintCode|Medium|[Zombie in Matrix](https://www.lintcode.com/problem/zombie-in-matrix/description)|[Java](./algorithms/ZombieInMatrix.java)|BFS|
@@ -80,6 +87,8 @@ L indidates Ladder from LintCode questions.
 ||618|LintCode|Medium|[Search Graph Nodes](https://www.lintcode.com/problem/search-graph-nodes/description)|[Java](./algorithms/SearchGraphNodes.java)|BFS|
 ||624|LintCode|Medium|[Remove Substrings](https://www.lintcode.com/problem/remove-substrings/description)|[Java](./algorithms/RemoveSubstrings.java)|BFS, String|
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
+||780|LeetCode|Hard|[Remove Invalid Parentheses](https://www.lintcode.com/problem/remove-invalid-parentheses/description)|[Java](./algorithms/RemoveInvalidParentheses.java)|DFS|
+||862|LintCode|Medium|[Next Closest Time](https://www.lintcode.com/problem/next-closest-time/description)|[Java](./algorithms/NextClosestTime.java)|DFS, String|
 ||900|LintCode|Easy|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value/description)|[Java](./algorithms/ClosestBinarySearchTreeValue.java)|BST, traverse|
 ||901|LintCode|Hard|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value-ii/description)|[Java](./algorithms/ClosestBinarySearchTreeValueII.java)|BST, traverse|
 ||902|LintCode|Medium|[Kth Smallest Element in a BST](https://www.lintcode.com/problem/kth-smallest-element-in-a-bst/description)|[Java](./algorithms/KthSmallestElementinaBST.java)|BST, traverse|
