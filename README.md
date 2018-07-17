@@ -24,7 +24,8 @@ L indidates Ladder from LintCode questions.
 ||20|LintCode|Easy|[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)|[Java](./algorithms/ValidParentheses.java)|String, Stack|
 |L|28/13|LeetCode/LintCode|Easy|[strStr](https://leetcode.com/problems/implement-strstr/description/)|[Java](./algorithms/strStr.java)|String|
 |L|33|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens.java)|DFS|
-|L|34|LintCode|Medium|[N-Queens](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens2.java)|DFS|
+|L|34|LintCode|Medium|[N-Queens II](https://www.lintcode.com/problem/n-queens/description)|[Java](./algorithms/N-Queens2.java)|DFS|
+||40|LintCode|Medium|[Implement Queue by Two Stacks](https://www.lintcode.com/problem/implement-queue-by-two-stacks/description)|[Java](./algorithms/ImplementQueuebyTwoStacks.java)|DFS|
 ||57|LintCode|Easy|[ThreeSum](https://www.lintcode.com/problem/3sum/description)|[Java](./algorithms/ThreeSum.java)|Two Pointer|
 |★|66|LintCode|Medium|[Binary Tree Preorder Traversal](https://www.lintcode.com/problem/binary-tree-preorder-traversal/description)|[Java](./algorithms/BinaryTreePreorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
 |★|67|LintCode|Medium|[Binary Tree Inorder Traversal](https://www.lintcode.com/problem/binary-tree-inorder-traversal/description)|[Java](./algorithms/BinaryTreeInorderTraversal.java)|Binary Tree, Divide and Conquer, DFS|
@@ -72,6 +73,8 @@ L indidates Ladder from LintCode questions.
 ||474|LintCode|Medium|[Lowest Common Ancestor II](https://www.lintcode.com/problem/lowest-common-ancestor-ii/description)|[Java](./algorithms/LowestCommonAncestorII.java)|Binary Search Tree|
 ||477|LintCode|Medium|[Combination Sum](https://www.lintcode.com/problem/combination-sum/description)|[Java](./algorithms/findkClosestElements.java)|DFS|
 ||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
+||494|LintCode|Easy|[Implement Stack by Two Queues](https://www.lintcode.com/problem/implement-stack-by-two-queues/description)|[Java](./algorithms/ImplementStackbyTwoQueues.java)|Stack|
+||495|LintCode|Easy|[Implement Stack](https://www.lintcode.com/problem/implement-stack/description)|[Java](./algorithms/ImplementStack.java)|Stack|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
 ||570|LintCode|Medium|[Find the Missing Number II](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
 ||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
