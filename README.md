@@ -11,7 +11,8 @@ L indidates Ladder from LintCode questions.
 | |#|Source|Difficulty|Problem|Solution|Tag| 
 |-|-|-|----------|-------|--------|---|
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
-||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestSubstringWithoutRepeatingCharacters.java)|Two Pointers, String|
+||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/
+||5|LeetCode|Medium|[Longest Palindromic Substring](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestPalindromicSubstring.java)|String|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||10|LeetCode|Medium|[String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)|[Java](./algorithms/StringPermutationII.java)|DFS|
 ||10|LeetCode|Medium|[MinStack](https://www.lintcode.com/problem/min-stack/description)|[Java](./algorithms/MinStack.java)|Stack|
