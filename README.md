@@ -11,7 +11,8 @@ L indidates Ladder from LintCode questions.
 | |#|Source|Difficulty|Problem|Solution|Tag| 
 |-|-|-|----------|-------|--------|---|
 |★|1|LeetCode|Easy|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](./algorithms/TwoSum.java)|Hash|
-||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/
+||3|LeetCode|Medium|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestSubstringWithoutRepeatingCharacters.java)|String|
+||4|LeetCode|Medium|[Ugly Number II](https://www.lintcode.com/problem/ugly-number-ii/description)|[Java](./algorithms/UglyNumberII.java)|Math, Heap|
 ||5|LeetCode|Medium|[Longest Palindromic Substring](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)|[Java](./algorithms/LongestPalindromicSubstring.java)|String|
 |★|7|LeetCode|Medium|[Serialize and Deserialize Binary Tree](https://www.lintcode.com/problem/binary-tree-serialization/description)|[Java](./algorithms/SerializeAndDeserializeBinaryTree.java)|BFS,DFS|
 ||10|LeetCode|Medium|[String Permutation II](https://www.lintcode.com/problem/string-permutation-ii/description)|[Java](./algorithms/StringPermutationII.java)|DFS|
@@ -54,6 +55,7 @@ L indidates Ladder from LintCode questions.
 ||178|LintCode|Medium|[Graph Valid Tree](https://www.lintcode.com/problem/graph-valid-tree/description)|[Java](./algorithms/GraphValidTree.java)|BFS, DFS, Union Find|
 ||200|LeetCode|Medium|[Longest Palindromic Substring](https://www.lintcode.com/problem/longest-palindromic-substring/description)|[Java](./algorithms/PalindromicSubstrings.java)|String, Dynamic Programming|
 ||206|LeetCode|Easy|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)|[Java](./algorithms/reverseList.java)| Pointers|
+||206|LeetCode|Easy|[First Unique Character in a String](https://www.lintcode.com/problem/first-unique-character-in-a-string/description)|[Java](./algorithms/FirstUniqueCharacterinaString.java)|String|
 ||211|LeetCode|Easy|[String Permutation](https://www.lintcode.com/problem/string-permutation/description)|[Java](./algorithms/reverseList.java)| Pointers|
 |L|228|LeetCode|Naive|[Middle of Linked List](https://www.lintcode.com/problem/middle-of-linked-list/description)|[Java](./algorithms/MiddleOfLinkedList.java)|Two Pointers|
 |L|242|LeetCode|Easy|[Convert Binary Tree to Linked Lists by Depth](https://www.lintcode.com/problem/convert-binary-tree-to-linked-lists-by-depth/description)|[Java](./algorithms/ConvertBinaryTreetoLinkedListsbyDepth.java)|BFS|
@@ -75,7 +77,9 @@ L indidates Ladder from LintCode questions.
 ||491|LintCode|Easy|[Palindrome Number](https://www.lintcode.com/problem/palindrome-number/description)|[Java](./algorithms/alindromeNumber.java)|Math|
 ||494|LintCode|Easy|[Implement Stack by Two Queues](https://www.lintcode.com/problem/implement-stack-by-two-queues/description)|[Java](./algorithms/ImplementStackbyTwoQueues.java)|Stack|
 ||495|LintCode|Easy|[Implement Stack](https://www.lintcode.com/problem/implement-stack/description)|[Java](./algorithms/ImplementStack.java)|Stack|
+||517|LintCode|Easy|[Ugly Number](https://www.lintcode.com/problem/ugly-number/description)|[Java](./algorithms/UglyNumber.java)|Math|
 |L|521|LintCode|Easy|[Remove Duplicate Numbers In Array](https://www.lintcode.com/problem/remove-duplicate-numbers-in-array/description)|[Java](./algorithms/RemoveDuplicateNumbersInArray.java)|Set, Sort|
+||521|LintCode|Medium|[Top k Largest Numbers](https://www.lintcode.com/problem/top-k-largest-numbers/description)|[Java](./algorithms/TopkLargestNumbers.java)|Heap|
 ||570|LintCode|Medium|[Find the Missing Number II](https://www.lintcode.com/problem/find-the-missing-number-ii/description)|[Java](./algorithms/FindtheMissingNumberII.java)|dfs|
 ||578|LintCode|Medium|[Lowest Common Ancestor III](https://www.lintcode.com/problem/lowest-common-ancestor-iii/description)|[Java](./algorithms/LowestCommonAncestorIII.java)|Binary Search Tree|
 ||582|LintCode|Medium|[Word Break II](https://www.lintcode.com/problem/word-break-ii/description)|[Java](./algorithms/WordBreakII.java)|DFS, Divide and Conquer|
@@ -91,6 +95,7 @@ L indidates Ladder from LintCode questions.
 ||618|LintCode|Medium|[Search Graph Nodes](https://www.lintcode.com/problem/search-graph-nodes/description)|[Java](./algorithms/SearchGraphNodes.java)|BFS|
 ||624|LintCode|Medium|[Remove Substrings](https://www.lintcode.com/problem/remove-substrings/description)|[Java](./algorithms/RemoveSubstrings.java)|BFS, String|
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
+||657|LeetCode|Medium|[Insert Delete GetRandom O(1)](https://www.lintcode.com/problem/insert-delete-getrandom-o1/description)|[Java](./algorithms/InsertDeleteGetRandomO(1).java)|Array, HashMap|
 ||780|LeetCode|Hard|[Remove Invalid Parentheses](https://www.lintcode.com/problem/remove-invalid-parentheses/description)|[Java](./algorithms/RemoveInvalidParentheses.java)|DFS|
 ||862|LintCode|Medium|[Next Closest Time](https://www.lintcode.com/problem/next-closest-time/description)|[Java](./algorithms/NextClosestTime.java)|DFS, String|
 ||900|LintCode|Easy|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value/description)|[Java](./algorithms/ClosestBinarySearchTreeValue.java)|BST, traverse|
@@ -123,7 +128,6 @@ for (int i=0; i < arrli.size(); i++)
 Collections.sort(arrli);   
 Collections.sort(arraylist, Collections.reverseOrder());  
 Collections.reverse(arrli);  
-
 ### Map size()  
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();  
 mp.size()  
@@ -131,7 +135,75 @@ mp.put(nums[i], true);
 mp.remove(key);  
 for (Map.Entry<Integer, Boolean> entry : mp.entrySet())  
 
+Hash Table / Hash Map / Linked Hash Map/ TreeMaps
+
+HashTable: "Hashtable" is the generic name for hash-based maps.
+
+HashMap: HashMap offers 0(1) lookup and insertion. If you iterate through the keys, though, the ordering of the keys is essentially arbitrary. It is implemented by an array of linked lists.
+
+LinkedHashMap: LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is implemented by doubly-linked buckets.
+
+TreeMap: TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through the keys in sorted order, you can. This means that keys must implement the Comparable interface. TreeMap is implemented by a Red-Black Tree.
+
+
+Reference:
+https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
+
+
+### Hash
+Operations  
+  O(1) Insert  
+  O(1) Delete  
+  O(1) Find  
+  
+Common Hash Function  
+• MD5  
+• SHA-1  
+• SHA-2  
+
+```java
+//Sample Hash Function1
+int hashFunc(String key){
+  return md5(key) % hashTableSize
+}
+int HASHKEY = 31
+int hashFunc(String key){
+  int sum = 0;
+  for(int i = 0; i < key.length(); i++){
+    // 乘法 加 模
+    sum = sum * HASHKEY + (int)(key.charAt(i));
+    sum = sum % hashTableSize;
+  }
+  return sum;
+}
+
+```
+How to select HASHKEY?  
+
+经验值
+这个数字选择一个质数会更好(经验)  
+数太大 --- 影响计算速度  
+数太小 --- 冲突太多  
+像 Apache 的底层库中，用的是 33  
+
+
+Collision
+  Open Hashing (LinkedList)  prefer
+  Closed Hashing (继续找下一个坑 +> + 23 or double hashing， 但是不好删除，删除之后要把空的位置补成tomb） 
+
+Hash Table / Hash Map / Hash Set 的区别是什么?  
+
+Java's Set and Map interfaces specify two very different collection types. A Map is, conceptually, just what it sounds like: a mapping from one set of objects (the keys) to another set (the values). A Set is also just what it sounds like: a collection of objects (with no other structure). Hashtable and HashMap both implement Map, HashSet implements Set, and they all use hash codes for keys/objects contained in the collections to improve performance.  
+
+Hash Table: is synchronized (thread safe) and allows duplicate keys, it also does NOT allow null keys or values
+
+Hash Map: is NOT synchronized (not thread safe) but allows duplicate keys, it also allows one null key and as many null values as you like  
+
+Hash Set: does NOT allow duplicate keys and is NOT synchronized (not thread safe, allows a null key 
+
+
 ### Set size()  
+
 Set <Integer> sets = new HashSet<Integer>();  
 set.size();  
 set.remove(object);  
@@ -180,6 +252,11 @@ for(Integer neighbor: graph.get(u)){
 
 ```
 ### Heap and comparable
+Operations  
+  O(log N) Add 
+  O(log N) Remove 
+  O(1) Min or Max  
+
 ```java 
 // Max heap
 PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k,new Comparator<Integer>(){
@@ -450,7 +527,13 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
        return results;
     }
 ```
+### 单调栈/(递增栈/递减栈)
+
+
 ### DP
+动态规划适合做的事情是把: 指数级 O(2^n) 优化成 多项式 O(n^2) 级的运算
+
+
 
 ## Time Complexity
 
@@ -459,6 +542,7 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
 
 ###
 ```
+
 搜索的时间复杂度：O(答案总数 * 构造每个答案的时间)
 举例：Subsets问题，求所有的子集。子集个数一共 2^n，每个集合的平均长度是 O(n) 的，所以时间复杂度为 O(n * 2^n)，同理 Permutations 问题的时间复杂度为：O(n * n!)
 
@@ -469,6 +553,12 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
 举例：二叉树最大深度。二叉树节点个数为 N，每个节点上的计算时间为 O(1)。总的时间复杂度为 O(N)
 
 *(额外)空间复杂度不用包括输入和输出的部分
+
+O(nlogn)
+1. 排序，二分
+2. heap/priority queue
+
+DP: 适合做的事情是把: 指数级 O(2^n) 优化成 多项式 O(n^2) 级的运算
 
 ```
 ![Screenshot](timeComplexity.png)
