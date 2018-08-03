@@ -43,7 +43,10 @@ L indidates Ladder from LintCode questions.
 |L|125/415|LeetCode/LintCode|Easy|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)|[Java](./algorithms/ValidPalindrome.java)|Two Pointers|
 |★|120|LintCode|Medium|[Word Ladder](https://www.lintcode.com/problem/word-ladder/description)|[Java](./algorithms/WordLadder.java)|BFS, DFS|
 |★|127|LintCode|Medium|[Topological Sorting](https://www.jiuzhang.com/solution/topological-sorting/)|[Java](./algorithms/TopologicalSorting.java)|BFS, DFS|
+||128|LintCode|Easy|[Hash Function](https://www.lintcode.com/problem/hash-function/description)|[Java](./algorithms/HashFunction.java)|HashTable|
+||129|LintCode|Medium|[Rehashing](https://www.lintcode.com/problem/rehashing/description)|[Java](./algorithms/Rehashing.java)|HashTable|
 |L|130|LintCode|Medium|[Heapify](https://www.lintcode.com/problem/heapify/description)|[Java](./algorithms/Heapify.java)|Heap|
+||134|LintCode|Hard|[LRU Cache](https://www.lintcode.com/problem/lru-cache/description)|[Java](./algorithms/LRUCache.java)|Double LinkedList + HashTable|
 ||136|LintCode|Medium|[Palindrome Partitioning](https://www.lintcode.com/problem/palindrome-partitioning/description)|[Java](./algorithms/PalindromePartitioning.java)|BFS, DFS|
 |L|137|LintCode|Medium|[Clone Graph](https://www.lintcode.com/problem/clone-graph/description)|[Java](./algorithms/CloneGraph.java)|BFS, DFS|
 |L|140|LintCode|Medium|[Fast Power](https://www.lintcode.com/en/problem/fast-power/)|[Java](./algorithms/FastPower.java)|Binary Search|
@@ -143,6 +146,7 @@ HashMap: HashMap offers 0(1) lookup and insertion. If you iterate through the ke
 
 LinkedHashMap: LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is implemented by doubly-linked buckets.
 
+
 TreeMap: TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through the keys in sorted order, you can. This means that keys must implement the Comparable interface. TreeMap is implemented by a Red-Black Tree.
 
 
@@ -191,6 +195,11 @@ Collision
   Open Hashing (LinkedList)  prefer
   Closed Hashing (继续找下一个坑 +> + 23 or double hashing， 但是不好删除，删除之后要把空的位置补成tomb） 
 
+Rehashing  
+当hash 不够大的时候，我们会需要rehashing  
+饱和度 = 实际存储元素个数 / 总共开辟的空间大小 size / capacity  
+一般来说，饱和度超过 1/10(经验值) 的时候，说明需要进行 rehash  
+
 Hash Table / Hash Map / Hash Set 的区别是什么?  
 
 Java's Set and Map interfaces specify two very different collection types. A Map is, conceptually, just what it sounds like: a mapping from one set of objects (the keys) to another set (the values). A Set is also just what it sounds like: a collection of objects (with no other structure). Hashtable and HashMap both implement Map, HashSet implements Set, and they all use hash codes for keys/objects contained in the collections to improve performance.  
@@ -203,7 +212,6 @@ Hash Set: does NOT allow duplicate keys and is NOT synchronized (not thread safe
 
 
 ### Set size()  
-
 Set <Integer> sets = new HashSet<Integer>();  
 set.size();  
 set.remove(object);  
