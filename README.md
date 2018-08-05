@@ -68,9 +68,10 @@ L indidates Ladder from LintCode questions.
 |★|350|LeetCode|Easy|[Intersection of Two ArraysII](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/)|[Java](./algorithms/IntersectionOfTwoArraysII.java)|Two Pointers, Set|
 ||378|LintCode|Medium|[Convert Binary Search Tree to Doubly Linked List](https://www.lintcode.com/problem/convert-binary-search-tree-to-doubly-linked-list/description)|[Java](./algorithms/ConvertBinarySearchTreetoDoublyLinkedList.java)|BST, linked list|
 |★|413|LintCode|Easy|[Two Sum](https://www.lintcode.com/problem/reverse-integer/description)|[Java](./algorithms/ReverseInteger.java)|Math|
+||425|LintCode|Medium|[Letter Combinations of a Phone Number](https://www.lintcode.com/problem/letter-combinations-of-a-phone-number/description)|[Java](./algorithms/LetterCombinationsPhoneNumber.java)|BST,DFS|
 |L|428|LintCode|Medium|[Pow(x, n)](https://www.lintcode.com/en/problem/powx-n/)|[Java](./algorithms/Powx-n.java)|Binary Search|
 |L|447|LintCode|Medium|[Search in a Big Sorted Array](https://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[Java](./algorithms/SearchInABigSortedArray.java)|Binary Search|
-||452|LintCode|Medium|[Letter Combinations of a Phone Number](https://www.lintcode.com/problem/letter-combinations-of-a-phone-number/description)|[Java](./algorithms/LetterCombinationsPhoneNumber.java)|BST,DFS|
+||452|LintCode|Naive|[Remove Linked List Elements](https://www.lintcode.com/problem/remove-linked-list-elements/description)|[Java](./algorithms/RemoveLinkedListElements.java)|linked list, dummy node|
 ||453|LintCode|Medium|[Flatten Binary Tree to Linked List](https://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/description)|[Java](./algorithms/FlattenBinaryTreetoLinkedList.java)|BST and LinkedList|
 ||457|LintCode|Easy|[Classical Binary Search](https://www.lintcode.com/en/problem/classical-binary-search/)|[Java](./algorithms/ClassicalBinarySearch.java)|Binary Search|
 |L|458|LintCode|Easy|[Last Position of Target](https://www.lintcode.com/en/problem/last-position-of-target/)|[Java](./algorithms/LastPositionOfTarget.java)|Binary Search|
@@ -118,6 +119,27 @@ Arrays.sort(nums);
 Arrays.sort(nums, Collections.reverseOrder());  
 for (int left = 0; left < nums.length; left++)  
 
+
+### SubArray
+prefixSum  
+sum[i~j] = prefixSum[j+1] - prefixSum[i]  
+
+```java
+example:
+/*
+
+    构造 PrefixSum 耗费 O(n) 时间和 O(n) 空间
+    如需计算子数组从下标i到下标j之间的所有数之和
+
+*/
+array = [1,2,3,4]
+prefixSum = [0,1,3,6,10]
+sum[i~j] = prefixSum[j+1] - prefixSum[i] 
+sum[0~3] = prefixSum[3+1] - prefixSum[0] = 10 
+i = 0
+j = 3
+```
+
 ### String length()  
 s.length()  
 for (char c : s.toCharArray())  
@@ -131,28 +153,42 @@ for (int i=0; i < arrli.size(); i++)
 Collections.sort(arrli);   
 Collections.sort(arraylist, Collections.reverseOrder());  
 Collections.reverse(arrli);  
+
+#### Linked List Dummy Node
+链表头 结构发生变化时就需要 Dummy Node
+
+```java
+ public ListNode removeElements(ListNode head, int val) {
+        if(head == null){
+            return head;
+        }
+        
+        ListNode dummy = new ListNode(-1);
+        // dummy node
+        dummy.next = head;
+        head = dummy;
+        
+        while(head.next != null){
+            if(head.next.val == val){
+                // head.next is changed
+               head.next = head.next.next;
+            } else {
+               head = head.next;
+            }
+            
+        }
+        
+        return  dummy.next;
+        
+    }
+```
+
 ### Map size()  
 Map<Integer, Boolean> mp = new HashMap<Integer, Boolean>();  
 mp.size()  
 mp.put(nums[i], true);   
 mp.remove(key);  
 for (Map.Entry<Integer, Boolean> entry : mp.entrySet())  
-
-Hash Table / Hash Map / Linked Hash Map/ TreeMaps
-
-HashTable: "Hashtable" is the generic name for hash-based maps.
-
-HashMap: HashMap offers 0(1) lookup and insertion. If you iterate through the keys, though, the ordering of the keys is essentially arbitrary. It is implemented by an array of linked lists.
-
-LinkedHashMap: LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is implemented by doubly-linked buckets.
-
-
-TreeMap: TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through the keys in sorted order, you can. This means that keys must implement the Comparable interface. TreeMap is implemented by a Red-Black Tree.
-
-
-Reference:
-https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
-
 
 ### Hash
 Operations  
@@ -199,17 +235,6 @@ Rehashing
 当hash 不够大的时候，我们会需要rehashing  
 饱和度 = 实际存储元素个数 / 总共开辟的空间大小 size / capacity  
 一般来说，饱和度超过 1/10(经验值) 的时候，说明需要进行 rehash  
-
-Hash Table / Hash Map / Hash Set 的区别是什么?  
-
-Java's Set and Map interfaces specify two very different collection types. A Map is, conceptually, just what it sounds like: a mapping from one set of objects (the keys) to another set (the values). A Set is also just what it sounds like: a collection of objects (with no other structure). Hashtable and HashMap both implement Map, HashSet implements Set, and they all use hash codes for keys/objects contained in the collections to improve performance.  
-
-Hash Table: is synchronized (thread safe) and allows duplicate keys, it also does NOT allow null keys or values
-
-Hash Map: is NOT synchronized (not thread safe) but allows duplicate keys, it also allows one null key and as many null values as you like  
-
-Hash Set: does NOT allow duplicate keys and is NOT synchronized (not thread safe, allows a null key 
-
 
 ### Set size()  
 Set <Integer> sets = new HashSet<Integer>();  
@@ -382,6 +407,17 @@ while (!queue.isEmpty()) {
     }
 }
 ```
+### 递归三要素
+```
+• 定义(状态)
+    • 接受什么参数
+    • 做了什么事
+    • 返回什么值 
+• 拆解(方程)
+    • 如何将参数变小 
+• 出口(初始化)
+    • 什么时候可以直接 return
+```
 ### DFS
 ```
 /*
@@ -540,8 +576,155 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
 
 ### DP
 动态规划适合做的事情是把: 指数级 O(2^n) 优化成 多项式 O(n^2) 级的运算
+```
+状态 State
+    • 灵感，创􏰄力，存储小规模问题的结果
+方程 Function
+    • 状态之间的联系，怎么通过小的状态，来算大的状态
+初始化 Initialization
+    • 最极限的小状态是什么, 起点
+答案 Answer
+    • 最大的那个状态是什么，终点
+
+```
+
+### Sorting
+
+#### n*log(n) Sorts
+##### Quick Select
+##### Merge Sort
+#### n^2 Sorts
+
+##### Bubble sort
+##### Insert sort
+##### Selection sort
+
+##Common Interview Questions
+### How to solve System Design Questions?
+```
+4S分析法 Scenario, Service, Storage, Scale
+
+1. Scenario 场景 – 需要设计哪些功能  
+   第一步: 把需要的功能一个个罗列出来
+   第二步: 选出核心功能，因为你不可能这么短的时间什么都设计
+   第三步: 做场景 Analysis & Predict (问清楚 requirements)
+        1.问清楚并发用户 Concurrent User
+        2.日活跃 * 每个用户平均请求次数 / 一天多少秒 
+        3.峰值 Peak = Average Concurrent User * 3
+        4.快速增长的产品 Fast Growing
+            MAX peak users in 3 months = Peak users * 2
+        从而得出
+            读频率 Read QPS (Queries Per Second)
+            写频率 Write QPS
+
+2. Service 服务 – 将大系统拆分为小服务
+    第一步 Replay: 重新过一遍每个需求，为每个需求添加一个服务
+    第二步 Merge: 归并相同的服务
+
+3. Storage 存储 – 数据如何存储与访问
+    第一步 Select: 为每个 Application / Service 选择合适的存储结构
+    第二步 Schema: 细化数据表结构
+
+4. Scale 扩展
+    第一步 Step 1: Optimize
+        解决设计缺陷
+        更多功能设计
+        一些特殊用例
+    第二步 Step 2: Maintenance
+        鲁棒性 Robust
+        扩展性 Scalability
+```
+
+提示:分析出 QPS 有什么用
+```
+• QPS = 100
+    • 用你的笔记本做 Web 服务器就好了
+• QPS=1k
+    • 用一台好点的 Web 服务器就差不多了
+    • 需要考虑 Single Point Failure
+• QPS=1m
+    • 需要建设一个1000台 Web 服务器的集群
+    • 需要考虑如何 Maintainance(某一台挂了怎么办)
+
+• QPS和 Web Server (服务器) / Database (数据库) 之间的关系
+    • 一台 Web Server 约承受量是 1k 的 QPS (考虑到逻辑处理时间以及数据库查询的瓶颈)
+    • 一台 SQL Database 约承受量是 1k 的 QPS(如果 JOIN 和 INDEX query比较多的话，这个值会更小)
+    • 一台 NoSQL Database (Cassandra) 约承受量是 10k 的 QPS
+    • 一台 NoSQL Database (Memcached) 约承受量是 1M 的 QPS
+
+```
+### How to solve OOD Questions?
+```
+5C解题法
+1.Clarify 通过和面试官交流，去除题目中的歧义，确定答题范围
+    问清楚 What and How
+
+2.Core Objects 确定题目所涉及的类，以及类之间的映射关系
+    • 什么是Core Object
+        - 为了完成设计，需要哪些类?
+    • 为什么要定义Core Object ?
+        - 这是和面试官初步的纸面contract
+        - 承上启下，来自于Clarify的结果，成为Use case的依据 
+        - 为画类图打下基础
+    • 如何定义Core Object ?
+        - 以一个Object作为基础，线性思考
+        - 确定Objects之间的映射关系
+
+3.Cases 确定题目中所需要实现的场景和功能
+    • 什么是Use case ?
+        在你设计的系统中，需要支持哪些功能?
+    • 为什么要写Use cases ?
+        - 这是你和面试官白纸黑字达成的第二份共识，把你将要实现的功能列在白板上
+        - 帮助你在解题过程中，理清条例，一个一个Case实现
+        - 作为检查的标准
+    • 如何写Use cases ?
+        - 利用定义的Core Object, 列举出每个Object对应产生的use case.
+        - 每个use case只需要先用一句简单的话来􏰅述即可
+
+4.Classes 通过类图的方式，具体填充题目中涉及的类
+    • 什么是类图?
+        - Class diagram (类图)
+            className, Attributes, Functions
+    • 为什么要画类图? 
+        - 可交付，Minimal Viable Product
+        - 节省时间，不容易在Coding上挣扎
+        - 建立在Use case上，和之前的步骤层层递进，条例清晰，便于交流和修改
+        - 如果时间允许/面试官要求，便于转化成Code
+    • 怎么画类图?
+        - 遍历你所列出的use cases
+        - 对于每一个use case，更加详细的􏰅述这个use case在做什么事情 (例如:take external request -> ElevatorSystem takes an external request, and decide to push this request to an appropriate elevator)
+        - 针对这个􏰅述，在已有的Core objects里填充进所需要的信息
+5.Correctness 检查自己的设计，是否满足关键点
+    • 从以下几方面检查:
+        - Validate use cases (检查是否支持所有的use case)
+        - Follow good practice (面试当中的加分项，展现一个程序员的经验)
+        - S.O.L.I.D
+        - Design pattern
+
+```
+####Hash Table / Hash Map / Linked Hash Map/ TreeMaps
+
+HashTable: "Hashtable" is the generic name for hash-based maps.
+
+HashMap: HashMap offers 0(1) lookup and insertion. If you iterate through the keys, though, the ordering of the keys is essentially arbitrary. It is implemented by an array of linked lists.
+
+LinkedHashMap: LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is implemented by doubly-linked buckets.
+
+TreeMap: TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through the keys in sorted order, you can. This means that keys must implement the Comparable interface. TreeMap is implemented by a Red-Black Tree.
 
 
+Reference:
+https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
+
+####Hash Table / Hash Map / Hash Set 的区别是什么?  
+
+Java's Set and Map interfaces specify two very different collection types. A Map is, conceptually, just what it sounds like: a mapping from one set of objects (the keys) to another set (the values). A Set is also just what it sounds like: a collection of objects (with no other structure). Hashtable and HashMap both implement Map, HashSet implements Set, and they all use hash codes for keys/objects contained in the collections to improve performance.  
+
+Hash Table: is synchronized (thread safe) and allows duplicate keys, it also does NOT allow null keys or values
+
+Hash Map: is NOT synchronized (not thread safe) but allows duplicate keys, it also allows one null key and as many null values as you like  
+
+Hash Set: does NOT allow duplicate keys and is NOT synchronized (not thread safe, allows a null key 
 
 ## Time Complexity
 
