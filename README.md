@@ -523,9 +523,9 @@ dfs 递归方法
 ```
 
 ### Traverse vs Divide Conquer vs DFS
-Common: They are both Recursion Algorithm , they all DFS， all can be done with no recursion
-Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结果) 
-      2. Top down (小人由上往下去记录) vs Bottom up (答案由下往上组合靠手下)
+Common: They are both Recursion Algorithm , they all DFS， all can be done with no recursion  
+Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结果)  
+      2. Top down (小人由上往下去记录) vs Bottom up (答案由下往上组合靠手下)  
 #### Code difference:
 ```
    /*
