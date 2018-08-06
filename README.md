@@ -100,6 +100,7 @@ L indidates Ladder from LintCode questions.
 ||624|LintCode|Medium|[Remove Substrings](https://www.lintcode.com/problem/remove-substrings/description)|[Java](./algorithms/RemoveSubstrings.java)|BFS, String|
 |★|647|LeetCode|Medium|[Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)|[Java](./algorithms/PalindromicSubstrings.java)|Two Pointers, DP|
 ||657|LeetCode|Medium|[Insert Delete GetRandom O(1)](https://www.lintcode.com/problem/insert-delete-getrandom-o1/description)|[Java](./algorithms/InsertDeleteGetRandomO(1).java)|Array, HashMap|
+||767|LeetCode|Easy|[Reverse Array](https://www.lintcode.com/problem/reverse-array/description)|[Java](./algorithms/ReverseArray.java)|Array, Two pointer|
 ||780|LeetCode|Hard|[Remove Invalid Parentheses](https://www.lintcode.com/problem/remove-invalid-parentheses/description)|[Java](./algorithms/RemoveInvalidParentheses.java)|DFS|
 ||862|LintCode|Medium|[Next Closest Time](https://www.lintcode.com/problem/next-closest-time/description)|[Java](./algorithms/NextClosestTime.java)|DFS, String|
 ||900|LintCode|Easy|[Closest Binary Search Tree Value](https://www.lintcode.com/problem/closest-binary-search-tree-value/description)|[Java](./algorithms/ClosestBinarySearchTreeValue.java)|BST, traverse|
@@ -259,17 +260,17 @@ results.setLength(results.length() - removeCount);
 results.toString();  
 ### Binary Search Tree
 从定义出发:
-• 左子树都比根节点小
-• 右子树都不小于根节点
+• 左子树都比根节点小  
+• 右子树都不小于根节点  
 
 从效果出发:
-• 中序遍历 in-order traversal 是“不下降”序列 (ascending order)
-• 中序遍历为12345
+• 中序遍历 in-order traversal 是“不下降”序列 (ascending order)  
+• 中序遍历为12345  
 
-如果一棵二叉树的中序遍历 **不是** ascending order 序列，则一定不是BST
+如果一棵二叉树的中序遍历 **不是** ascending order 序列，则一定不是BST  
 例如: 12435
 
-如果一棵二叉树的中序遍历是不下降，也未必是BST
+如果一棵二叉树的中序遍历是不下降，也未必是BST  
 例如: 111111
 
 ### Graph
@@ -595,9 +596,27 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
 ##### Merge Sort
 #### n^2 Sorts
 
-##### Bubble sort
-##### Insert sort
-##### Selection sort
+##### Bubble Sort
+##### Insert Sort
+##### Selection Sort
+#### External Sorting (外排序)
+外排序（External sorting）是指能够处理极大量数据的排序算法。通常来说，外排序处理的数据不能一次装入内存，只能放在读写较慢的外存储器（通常是硬盘）上。外排序通常采用的是一种“排序-归并”的策略。在排序阶段，先读入能放在内存中的数据量，将其排序输出到一个临时文件，依此进行，将待排序数据组织为多个有序的临时文件。尔后在归并阶段将这些临时文件组合为一个大的有序文件，也即排序结果。  
+
+##### 外排序算法分为两个基本步骤： 
+
+    1. 将大文件切分为若干个个小文件，并分别使用内存排好序  
+    2. 使用K路归并算法（k-way merge）将若干个排好序的小文件合并到一个大文件中  
+
+##### 第一步：文件拆分  
+根据内存的大小，尽可能多的分批次的将数据 Load 到内存中，并使用系统自带的内存排序函数（或者自己写个快速排序算法），将其排好序，并输出到一个个小文件中。比如一个文件有1T，内存有1G，那么我们就这个大文件中的内容按照 1G 的大小，分批次的导入内存，排序之后输出得到 1024 个 1G 的小文件  
+
+##### 第二步：K路归并算法  
+K路归并算法使用的是数据结构堆（Heap/ Priority Queue）来完成的  
+
+我们将K个文件中的第一个元素加入到堆里，假设数据是从小到大排序的话，那么这个堆是一个最小堆（Min Heap）。每次从堆中选出最小的元素，输出到目标结果文件中，然后如果这个元素来自第 x 个文件，则从第 x 个文件中继续读入一个新的数进来放到堆里，并重复上述操作，直到所有元素都被输出到目标结果文件中。  
+
+##### Follow up: 一个个从文件中读入数据，一个个输出到目标文件中操作很慢，如何优化？
+如果我们每个文件只读入1个元素并放入堆里的话，总共只用到了 1024 个元素，这很小，没有充分的利用好内存。另外，单个读入和单个输出的方式也不是磁盘的高效使用方式。因此我们可以为输入和输出都分别加入一个缓冲（Buffer）。假如一个元素有10个字节大小的话，1024 个元素一共 10K，1G的内存可以支持约 100K 组这样的数据，那么我们就为每个文件设置一个 100K 大小的 Buffer，每次需要从某个文件中读数据，都将这个 Buffer 装满。当然 Buffer 中的数据都用完的时候，再批量的从文件中读入。输出同理，设置一个 Buffer 来避免单个输出带来的效率缓慢。  
 
 ##Common Interview Questions
 ### How to solve System Design Questions?
