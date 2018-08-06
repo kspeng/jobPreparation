@@ -284,11 +284,11 @@ for(Integer neighbor: graph.get(u)){
 }
 
 ```
-### Heap and comparable
+### Heap and Comparable
 Operations  
-  O(log N) Add 
-  O(log N) Remove 
-  O(1) Min or Max  
+  O(log N) Add  
+  O(log N) Remove  
+  O(1) Min or Max   
 
 ```java 
 // Max heap
@@ -702,7 +702,7 @@ Diff: 1. Result in parameter (小本本) vs Result in return value (手下的结
         - Design pattern
 
 ```
-####Hash Table / Hash Map / Linked Hash Map/ TreeMaps
+#### Hash Table / Hash Map / Linked Hash Map/ TreeMaps
 
 HashTable: "Hashtable" is the generic name for hash-based maps.
 
@@ -716,7 +716,7 @@ TreeMap: TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if y
 Reference:
 https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
 
-####Hash Table / Hash Map / Hash Set 的区别是什么?  
+#### Hash Table / Hash Map / Hash Set 的区别是什么?  
 
 Java's Set and Map interfaces specify two very different collection types. A Map is, conceptually, just what it sounds like: a mapping from one set of objects (the keys) to another set (the values). A Set is also just what it sounds like: a collection of objects (with no other structure). Hashtable and HashMap both implement Map, HashSet implements Set, and they all use hash codes for keys/objects contained in the collections to improve performance.  
 
